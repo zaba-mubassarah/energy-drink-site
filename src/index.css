@@ -1,0 +1,41 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Load Sakana local font */
+@font-face {
+  font-family: 'Sakana';
+  src: url('/fonts/Sakana-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Some font files report a different internal name — add an alias */
+@font-face {
+  font-family: 'Sakina';
+  src: url('/fonts/Sakana-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #050507;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
