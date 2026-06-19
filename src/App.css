@@ -186,20 +186,21 @@
 .lineup-image-wrap {
   position: relative;
   width: 100%;
-  min-height: 320px;
+  min-height: 270px;
   display: grid;
   place-items: end center;
   overflow: visible;
 }
 
-.lineup-image-wrap::after {
+  .lineup-image-wrap::after {
   content: '';
-  width: 58%;
-  height: 18px;
-  margin-top: -8px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.72);
-  filter: blur(6px);
+  width: 90%;
+  height: 24px;
+  margin-top: 0px;
+  transform: translateY(-55px);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(30, 30, 35, 0.95) 0%, rgba(50, 50, 55, 0.6) 50%, transparent 75%);
+  filter: blur(4px);
 }
 
 .lineup-can {
@@ -207,8 +208,10 @@
   z-index: 2;
   width: auto;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
   filter: drop-shadow(0 28px 28px rgba(0, 0, 0, 0.78));
+  transform: translateY(-40px);
 }
 
 .lineup-can-small {
@@ -225,7 +228,7 @@
   max-width: none;
   transform: rotate(90deg);
   filter:
-    drop-shadow(0 34px 34px rgba(0, 0, 0, 0.82))
+    drop-shadow(0 42px 34px rgba(0, 0, 0, 0.82))
     drop-shadow(0 0 30px rgba(224, 230, 0, 0.24));
 }
 
@@ -277,7 +280,7 @@
   }
 
   .lineup-image-wrap {
-    min-height: 280px;
+    min-height: 230px;
   }
 }
 
@@ -294,7 +297,7 @@
   }
 
   .lineup-image-wrap {
-    min-height: 230px;
+    min-height: 180px;
   }
 
   .lineup-can-small {
