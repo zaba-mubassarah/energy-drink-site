@@ -146,6 +146,7 @@ function App() {
       gsap.set(canRef.current, {
         rotation: 0,
         scale: 0.95,
+        opacity: 1,
         width: `${CAN_START_WIDTH}px`,
         height: `${CAN_START_HEIGHT}px`,
         transformOrigin: 'center center',
@@ -168,6 +169,7 @@ function App() {
       timeline
         .to(canRef.current, {
           scale: 1.38,
+          opacity: 0.72,
           ease: 'none',
         }, 0.08)
         .to(canRef.current, {
@@ -175,6 +177,7 @@ function App() {
           top: () => getFinalCanState().top,
           rotation: -90,
           scale: 1,
+          opacity: 0.92,
           width: () => getFinalCanState().width,
           height: () => getFinalCanState().height,
           ease: 'none',
@@ -191,9 +194,9 @@ function App() {
 
   return (
     <div ref={pageRef} className="bg-[#050507] text-white">
-      <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-[#050507]/95 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-40 bg-[#050507]/95 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4">
-          <div className="text-sm font-black uppercase tracking-[0.28em] text-[#d8ff00]">Nitro</div>
+          <div className="nav-logo">Nitro</div>
           <nav className="hidden items-center gap-8 text-sm uppercase tracking-[0.16em] text-white/80 md:flex">
             <a href="#home" className="transition hover:text-white">Home</a>
             <a href="#shop" className="transition hover:text-white">Shop</a>
@@ -201,7 +204,7 @@ function App() {
             <a href="#gallery" className="transition hover:text-white">Gallery</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
           </nav>
-          <button className="inline-flex h-10 items-center justify-center rounded-[9999px] bg-[#d8ff00] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#050507] shadow-lg shadow-[#d8ff0030] transition hover:brightness-95">
+          <button className="inline-flex h-10 items-center justify-center bg-[#d8ff00] px-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#050507] shadow-lg shadow-[#d8ff0030] transition hover:brightness-95">
             Buy Now
           </button>
         </div>
@@ -315,8 +318,8 @@ function App() {
 
       <div
         ref={canRef}
-        className="fixed z-[35] overflow-visible">
-        <img src="/Can.png" alt="Nitro can" className="block h-full w-full object-contain" />
+        className="scrolling-can fixed z-[35] overflow-visible">
+        <img src="/Can.png" alt="Nitro can" className="scrolling-can-image block h-full w-full object-contain" />
       </div>
     </div>
   )

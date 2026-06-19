@@ -38,6 +38,29 @@
   display: block;
 }
 
+.nav-logo {
+  font-family: 'Sakana', 'Sakina', sans-serif;
+  font-size: 2.35rem;
+  line-height: 0.82;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #d8ff00;
+}
+
+.scrolling-can {
+  pointer-events: none;
+  perspective: 900px;
+}
+
+.scrolling-can-image {
+  filter:
+    drop-shadow(0 38px 30px rgba(0, 0, 0, 0.62))
+    drop-shadow(-18px 8px 18px rgba(224, 230, 0, 0.16))
+    drop-shadow(18px -10px 20px rgba(255, 255, 255, 0.1));
+}
+
 @media (max-width: 900px) {
   .section-one,
   .section-two,
