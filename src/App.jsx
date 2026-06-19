@@ -6,13 +6,13 @@ import './App.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const CAN_IMAGE_RATIO = 402 / 1090
-const CAN_START_WIDTH = 620
-const CAN_START_HEIGHT = 250
-const CAN_FALLBACK_WIDTH = 540
-const FINAL_CAN_MOBILE_WIDTH = 280
-const FINAL_CAN_MIN_WIDTH = 390
-const FINAL_CAN_MAX_WIDTH = 540
-const FINAL_CAN_VIEWPORT_RATIO = 0.36
+const CAN_START_WIDTH = 700
+const CAN_START_HEIGHT = 282
+const CAN_FALLBACK_WIDTH = 620
+const FINAL_CAN_MOBILE_WIDTH = 325
+const FINAL_CAN_MIN_WIDTH = 450
+const FINAL_CAN_MAX_WIDTH = 620
+const FINAL_CAN_VIEWPORT_RATIO = 0.42
 const FINAL_CAN_BOTTOM_CLEARANCE = 140
 
 const sections = [
@@ -167,7 +167,7 @@ function App() {
 
       timeline
         .to(canRef.current, {
-          scale: 1.2,
+          scale: 1.38,
           ease: 'none',
         }, 0.08)
         .to(canRef.current, {
