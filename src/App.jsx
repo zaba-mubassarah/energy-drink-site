@@ -168,7 +168,7 @@ function App() {
 
       timeline
         .to(canRef.current, {
-          scale: 1.38,
+          scale: 1.55,
           opacity: 0.72,
           ease: 'none',
         }, 0.08)
@@ -176,7 +176,7 @@ function App() {
           left: () => getFinalCanState().left,
           top: () => getFinalCanState().top,
           rotation: -90,
-          scale: 1,
+          scale: 1.15,
           opacity: 0.92,
           width: () => getFinalCanState().width,
           height: () => getFinalCanState().height,
